@@ -35,6 +35,7 @@
     0px 1px 5px 1px rgba(194, 206, 225, 0.21);
   --ext-card-btn-txt: #{$neutral900};
   --ext-card-btn-brdr: #{$neutral200};
+  --ext-card-toggle-bg: #{$neutral300};
 }
 
 [data-theme = "dark"] {
@@ -57,7 +58,7 @@
   --ext-card-bg: #{$neutral800};
   --ext-card-brdr: #{$neutral600};
   --ext-card-bs: none;
-
   --ext-card-btn-txt: #{$neutral0};
   --ext-card-btn-brdr: #{$neutral600};
+  --ext-card-toggle-bg: #{$neutral600};
 }

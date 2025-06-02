@@ -4,8 +4,10 @@ import moon from "../../assets/images/icon-moon.svg";
 import sun from "../../assets/images/icon-sun.svg";
 import "./ThemeToggle.scss";
 
-function ThemeToggle({ handleChanage, isChecked }) {
-  const [toggleIcon, setToggleIcon] = useState(sun);
+function ThemeToggle({ handleChange, isChecked }) {
+
+  const toggleIcon = isChecked ? sun : moon;
+
   return (
     <div className="themeToggle-container">
       <div className="themeToggle__logoWrapper">
@@ -36,7 +38,10 @@ function ThemeToggle({ handleChanage, isChecked }) {
         </svg>
       </div>
       <div className="themeToggle__toggle">
-        <img src={toggleIcon} alt="" className="themeToggle__icon"/>
+        
+        <input type="checkbox" id="check" className="toggleBtn" onChange={handleChange} checked={isChecked} />
+        <label htmlFor="check"><img src={toggleIcon} alt="" className="themeToggle__icon" /></label>
+        
       </div>
     </div>
   );

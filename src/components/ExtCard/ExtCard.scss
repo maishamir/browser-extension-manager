@@ -56,7 +56,7 @@
   position: relative;
   height: 1.25rem;
   width: 2.25rem;
-  background: $neutral300;
+  background: var(--ext-card-toggle-bg);
   border-radius: $radiusFull;
   cursor: pointer;
 

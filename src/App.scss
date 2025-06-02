@@ -34,7 +34,8 @@
 
       &--selected {
         @extend .text-preset-4;
-        background: var(--selected-button)
+        background: var(--selected-button);
+        border: 1px solid transparent;
       }
     }
   }

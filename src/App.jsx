@@ -5,9 +5,14 @@ import ThemeToggle from "./components/ThemeToggle/ThemeToggle";
 import ExtCard from "./components/ExtCard/ExtCard";
 
 function App() {
+
+  const [isDark, setIsDark] = useState(true);
+
+
+
   return (
-    <div className="app">
-      <ThemeToggle />
+    <div className="app" data-theme = {isDark ? 'dark' : 'light'}>
+      <ThemeToggle isChecked={isDark} handleChange={() => setIsDark(prev => !prev)}/>
       <div className="app__header">
       
         <h1 className="app__title">Extensions List</h1>
