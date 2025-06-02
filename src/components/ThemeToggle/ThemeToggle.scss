@@ -9,20 +9,37 @@
     background-color: var(--toggle-container);
     justify-content: space-between;
     padding: 0.75rem;
-    box-shadow: 0px 2px 3px -2px #D9E5F4;
+    box-shadow: var(--toggle-container-bs);
     border-radius: $radius10;
   }
 
   &__toggle {
-    padding: 0.75rem;
     background: var(--toggle-bg);
     border-radius: $radius12;
+    height: 3.125rem;
+    width: 3.125rem;
+    position: relative;
+    cursor: pointer;
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
 
+.logo-icon {
+  fill: var(--logo-icon);
+}
 
-//TODO: STYLE TOGGLE BUTTON 
+.logo-text {
+  fill: var(--logo-text);
+}
+
+//TODO: STYLE TOGGLE BUTTON
 // TODO: HOOK UP THEME SWITCHING CAPABILITY
-  //TODO: IMPLEMENT DARK THEME STYLES
-  // TODO: CREATE STATE FOR THEME
-  // TODO: HOOK UP USELOCALSTORAGE 
+//TODO: IMPLEMENT DARK THEME STYLES
+// TODO: CREATE STATE FOR THEME
+// TODO: HOOK UP USELOCALSTORAGE

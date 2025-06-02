@@ -9,6 +9,7 @@ function App() {
     <div className="app">
       <ThemeToggle />
       <div className="app__header">
+      
         <h1 className="app__title">Extensions List</h1>
 
         <div className="app__filters">

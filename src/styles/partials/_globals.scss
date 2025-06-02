@@ -16,13 +16,48 @@
   --tp4: #{$neutral0};
   --tp5: #{$neutral600};
   --tp6: #{neutral600};
-  --selected-button: #{$red700};
+  
   --toggle-container: #{$neutral0};
+  --toggle-container-bs: 0px 2px 3px -2px #D9E5F4;
+
+  --filter-button-brdr: none;
+
+  --logo-icon: #{$red700};
+  --logo-text: #{$neutral900};
+
+  --selected-button: #{$red700};
   --toggle-bg: #{$neutral100};
   --button-bg: #{$neutral0};
 
   --ext-card-bg: #{$neutral0};
+  --ext-card-brdr: #{$neutral200};
+  --ext-card-bs: 0px 2px 2px 0px rgba(194, 206, 225, 0.21),
+    0px 1px 5px 1px rgba(194, 206, 225, 0.21);
   --ext-card-btn-txt: #{$neutral900};
-  --ext-card-btn-brdr: #{$neutral300};
+  --ext-card-btn-brdr: #{$neutral200};
+}
 
+[data-theme = "dark"] {
+  --background: #{$darkGradient};
+  --tp1: #{$neutral0};
+  --tp2: #{$neutral0};
+  --tp3: #{$neutral0};
+  --tp4: #{$neutral900};
+  --tp5: #{$neutral300};
+  --toggle-container: #{$neutral800};
+  --toggle-container-bs: none;
+
+  --filter-button-brdr: #{$neutral600};
+  --logo-icon: #{$red400};
+  --logo-text: white;
+  --selected-button: #{$red400};
+  --toggle-bg: #{$neutral700};
+  --button-bg: #{$neutral700};
+
+  --ext-card-bg: #{$neutral800};
+  --ext-card-brdr: #{$neutral600};
+  --ext-card-bs: none;
+
+  --ext-card-btn-txt: #{$neutral0};
+  --ext-card-btn-brdr: #{$neutral600};
 }

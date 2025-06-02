@@ -28,7 +28,7 @@
       @extend .text-preset-3;
       background: var(--button-bg);
       padding: $spacing100 $spacing250;
-      border: none;
+      border: 1px solid var(--filter-button-brdr);
       border-radius: $radiusFull;
       cursor: pointer;
 
