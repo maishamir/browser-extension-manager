@@ -16,8 +16,10 @@ function ExtCard({logo, name, description, isActive}) {
       </div>
 
       <div className="extCard__buttons">
-        <button type="button">Remove</button>
-        <input type="checkbox" name="" id="" checked={isActive} />
+        <button className="extCard__buttons--remove" type="button">Remove</button>
+        
+        <input className='extCard__buttons--toggle' type="checkbox" name="toggle" id={`toggle-${name}`} />
+        <label htmlFor={`toggle-${name}`} className='toggle'></label>
       </div>
     </div>
   )

@@ -6,7 +6,8 @@
   padding: $spacing250;
   background-color: var(--ext-card-bg);
   border-radius: $radius20;
-  box-shadow: 0px 2px 2px 0px rgba(194,206,225,0.21),  0px 1px 5px 1px rgba(194,206,225,0.21);
+  box-shadow: 0px 2px 2px 0px rgba(194, 206, 225, 0.21),
+    0px 1px 5px 1px rgba(194, 206, 225, 0.21);
 
   &__content {
     display: flex;
@@ -29,11 +30,11 @@
     }
   }
 
-
   &__buttons {
     display: flex;
     // background: #000;
     justify-content: space-between;
+    align-items: center;
 
     button {
       @extend .text-preset-6;
@@ -44,5 +45,40 @@
       background: transparent;
       border: 1px solid var(--ext-card-btn-brdr);
     }
+
+    &--toggle {
+      display: none;
+    }
   }
+}
+
+.toggle {
+  position: relative;
+  height: 1.25rem;
+  width: 2.25rem;
+  background: $neutral300;
+  border-radius: $radiusFull;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    background-color: $neutral0;
+    border-radius: $radiusFull;
+    top: 2px;
+    left: 2px;
+    transition: all 0.25s ease-out;
+    box-shadow:  0px 1px 3px 0px rgba(10, 13, 18, 0.3);
+  }
+}
+
+.extCard__buttons--toggle:checked + .toggle {
+  background-color: $red700;
+}
+
+.extCard__buttons--toggle:checked + .toggle::after {
+  transform: translateX(1rem);
+
 }
