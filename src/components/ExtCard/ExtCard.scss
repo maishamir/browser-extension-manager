@@ -1,0 +1,48 @@
+@use "../../styles/partials/globals" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+.extCard {
+  padding: $spacing250;
+  background-color: var(--ext-card-bg);
+  border-radius: $radius20;
+  box-shadow: 0px 2px 2px 0px rgba(194,206,225,0.21),  0px 1px 5px 1px rgba(194,206,225,0.21);
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing200;
+    margin-bottom: $spacing300;
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing100;
+    }
+
+    &--name {
+      @extend .text-preset-2;
+    }
+
+    &--description {
+      @extend .text-preset-5;
+    }
+  }
+
+
+  &__buttons {
+    display: flex;
+    // background: #000;
+    justify-content: space-between;
+
+    button {
+      @extend .text-preset-6;
+      color: var(--ext-card-btn-txt);
+      padding: $spacing100 $spacing200;
+      border: none;
+      border-radius: $radiusFull;
+      background: transparent;
+      border: 1px solid var(--ext-card-btn-brdr);
+    }
+  }
+}

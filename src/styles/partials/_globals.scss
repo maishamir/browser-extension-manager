@@ -1,0 +1,28 @@
+@use "variables" as *;
+@use "typography" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans";
+}
+
+:root {
+  --background: #{$lightGradient}; 
+  --tp1: #{$neutral900};
+  --tp2: #{$neutral900};
+  --tp3: #{$neutral900};
+  --tp4: #{$neutral0};
+  --tp5: #{$neutral600};
+  --tp6: #{neutral600};
+  --selected-button: #{$red700};
+  --toggle-container: #{$neutral0};
+  --toggle-bg: #{$neutral100};
+  --button-bg: #{$neutral0};
+
+  --ext-card-bg: #{$neutral0};
+  --ext-card-btn-txt: #{$neutral900};
+  --ext-card-btn-brdr: #{$neutral300};
+
+}

@@ -1,0 +1,49 @@
+// * ~ c o l o u r s ~ * //
+// NEUTRALS
+$neutral900: #091540;
+$neutral800: #202535;
+$neutral700: #2f364B;
+$neutral600: #535868;
+$neutral300: #C6C6C6;
+$neutral200: #D6E2F5;
+$neutral100: #EEEEEE;
+$neutral0: #FBFDFE;
+
+// REDS
+$red400: #F35C54;
+$red500: #DE4840;
+$red700: #C7231A;
+
+// GRADIENTS 
+$lightGradient: linear-gradient(180deg, #EBF2FC 0%, #EEFBF9 100%);
+$darkGradient: linear-gradient(180deg, #04091B 0%, #091540 100%);
+
+
+// * ~ s p a c i n g ~ * //
+$spacing0: 0;
+$spacing025: 0.125rem; // 2px
+$spacing050: 0.25rem; // 4px
+$spacing075: 0.375rem; // 6px
+$spacing100: 0.5rem; // 8px
+$spacing125: 0.625rem; // 10px
+$spacing150: 0.75rem; // 12px
+$spacing200: 1rem; // 16px
+$spacing250: 1.25rem; // 20px
+$spacing300: 1.5rem; // 24px
+$spacing400: 2rem; // 32px
+$spacing500: 2.5rem; // 40px
+$spacing600: 3rem; // 48px 
+$spacing800: 4rem; // 64px
+$spacing1000: 5rem; // 80px
+
+// * ~ b o r d e r  •  r a d i u s ~ * //
+$radius0: 0;
+$radius4: 0.25rem;
+$radius6: 0.375rem;
+$radius8: 0.5rem;
+$radius10: 0.625rem;
+$radius12: 0.75rem;
+$radius16: 1rem;
+$radius20: 1.25rem;
+$radius24: 1.5rem;
+$radiusFull: 65rem;

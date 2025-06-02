@@ -1,0 +1,49 @@
+@use "./styles/partials/globals" as *;
+@use "./styles/partials/variables" as *;
+// @use "./styles/partials/typography" as *;
+
+
+.app {
+  min-height: 100vh;
+  background: var(--background);
+  padding: $spacing250 $spacing200;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: $spacing500;
+    gap: $spacing300;
+  }
+
+  &__title {
+    @extend .text-preset-1;
+    text-align: center;
+  }
+
+  &__filters {
+    display: flex;
+    gap: $spacing150;
+    &-button {
+      @extend .text-preset-3;
+      background: var(--button-bg);
+      padding: $spacing100 $spacing250;
+      border: none;
+      border-radius: $radiusFull;
+      cursor: pointer;
+
+      &--selected {
+        @extend .text-preset-4;
+        background: var(--selected-button)
+      }
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing150;
+    margin-top: $spacing500;
+    
+  }
+}

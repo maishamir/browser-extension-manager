@@ -1,60 +1,46 @@
-import { useState } from 'react'
+import { useState } from "react";
+import "./App.scss";
+import data from "./data/data.json";
+import ThemeToggle from "./components/ThemeToggle/ThemeToggle";
+import ExtCard from "./components/ExtCard/ExtCard";
 
 function App() {
-
   return (
-    <>
-      Extensions List
+    <div className="app">
+      <ThemeToggle />
+      <div className="app__header">
+        <h1 className="app__title">Extensions List</h1>
 
-      All
-      Active
-      Inactive
+        <div className="app__filters">
+          <button
+            type="button"
+            className="app__filters-button app__filters-button--selected"
+          >
+            All
+          </button>
+          <button type="button" className="app__filters-button">
+            Active
+          </button>
+          <button type="button" className="app__filters-button">
+            Inactive
+          </button>
+        </div>
+      </div>
 
-      DevLens
-      Quickly inspect page layouts and visualize element boundaries.
-      Remove
-
-      StyleSpy
-      Instantly analyze and copy CSS from any webpage element.
-      Remove
-      
-      SpeedBoost
-      Optimizes browser resource usage to accelerate page loading.
-      Remove
-
-      JSONWizard
-      Formats, validates, and prettifiies JSON responses in-browser.
-      Remove
-
-      TabMaster Pro
-      Organizes browsser tabs into groups and sessions.
-      Remove
-
-      ViewportBuddy
-      Simulates various screen resolutions directly within the browser.
-      Remove
-
-      Markup Notes
-      Enables annotation and notes directly onto webpages for collaborative debugging.
-      Remove
-
-      GridGuides
-      Overlay customizable grids and alignment guides on any webpage.
-      Remove
-
-      Palette Picker
-      Instantly extracts color palettes from any webpage.
-      Remove
-
-      Dom Snapshot
-      Capture and export DOM structures quickly.
-      Remove
-
-      ConsolePlus
-      Enhanced developer console with advanced filtering and logging.
-      Remove
-    </>
-  )
+      <div className="app__cards">
+        {data.map((app) => {
+          return (
+            <ExtCard
+              logo={app.logo}
+              name={app.name}
+              description={app.description}
+              isActive={app.isActive}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
