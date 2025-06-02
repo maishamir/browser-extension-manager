@@ -7,9 +7,18 @@ import ExtCard from "./components/ExtCard/ExtCard";
 function App() {
 
   const [isDark, setIsDark] = useState(true);
+  const [selectedFilter, setSelectedFilter] = useState('Inactive') 
 
 
+  const visibleItems = data.filter(item => {
+    if (selectedFilter === "Inactive") return !item.isActive;
+    if (selectedFilter === "Active") return item.isActive;
+    return true
+  })
 
+  let selected = ""
+
+  console.log(visibleItems)
   return (
     <div className="app" data-theme = {isDark ? 'dark' : 'light'}>
       <ThemeToggle isChecked={isDark} handleChange={() => setIsDark(prev => !prev)}/>
@@ -18,23 +27,23 @@ function App() {
         <h1 className="app__title">Extensions List</h1>
 
         <div className="app__filters">
-          <button
+          <button onClick={() => setSelectedFilter('All')}
             type="button"
-            className="app__filters-button app__filters-button--selected"
+            className={`app__filters-button ${selectedFilter === 'All' ? 'app__filters-button--selected' : ""}`}
           >
             All
           </button>
-          <button type="button" className="app__filters-button">
+          <button type="button" className={`app__filters-button ${selectedFilter === 'Active' ? 'app__filters-button--selected' : ""}`} onClick={() => setSelectedFilter("Active")}>
             Active
           </button>
-          <button type="button" className="app__filters-button">
+          <button type="button" className={`app__filters-button ${selectedFilter === 'Inactive' ? 'app__filters-button--selected' : ""}`} onClick={() => setSelectedFilter("Inactive")}>
             Inactive
           </button>
         </div>
       </div>
 
       <div className="app__cards">
-        {data.map((app) => {
+        {visibleItems.map((app) => {
           return (
             <ExtCard
               logo={app.logo}
