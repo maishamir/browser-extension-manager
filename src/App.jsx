@@ -11,17 +11,25 @@ function App() {
   
   const [isDark, setIsDark] = useLocalStorage("isDark", preference);
   const [selectedFilter, setSelectedFilter] = useState('All') 
+  const [items, setItems] = useState(data)
+
+  function handleDelete(e) {
+    const remainingExtensions = items.filter(item => item.name !== e.target.id)
+    setItems(remainingExtensions)
+  }
+
+  function handleToggle(name) {
+    const updated = items.map(item => item.name === name ? { ...item, isActive: !item.isActive } : item);
+    setItems(updated);
+  }
 
 
-  const visibleItems = data.filter(item => {
+  const visibleItems = items.filter(item => {
     if (selectedFilter === "Inactive") return !item.isActive;
     if (selectedFilter === "Active") return item.isActive;
     return true
   })
 
-  let selected = ""
-
-  console.log(visibleItems)
   return (
     <div className="app" data-theme = {isDark ? 'dark' : 'light'}>
       <ThemeToggle isChecked={isDark} handleChange={() => setIsDark(prev => !prev)}/>
@@ -53,6 +61,8 @@ function App() {
               name={app.name}
               description={app.description}
               isActive={app.isActive}
+              handleDelete={handleDelete}
+              handleToggle={handleToggle}
             />
           );
         })}

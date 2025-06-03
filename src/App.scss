@@ -78,7 +78,7 @@
     flex-direction: column;
     gap: $spacing150;
     margin-top: $spacing500;
-
+    align-items: stretch;
     @include tablet {
       margin-top: $spacing400;
       flex-direction: row;

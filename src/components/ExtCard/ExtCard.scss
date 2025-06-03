@@ -9,6 +9,8 @@
   border-radius: $radius20;
   border: 1px solid var(--ext-card-brdr);
   box-shadow: var(--ext-card-bs);
+  display: flex;
+  flex-direction: column;
   @include tablet {
      flex: 1 1 calc(50% - $spacing150 / 2);
   }
@@ -22,6 +24,8 @@
     align-items: flex-start;
     gap: $spacing200;
     margin-bottom: $spacing300;
+    flex-grow: 1;
+    margin-bottom: $spacing600;
 
     @include tablet {
       margin-bottom: 2.875rem;
@@ -43,6 +47,7 @@
   }
 
   &__buttons {
+    margin-top: 0;
     display: flex;
     // background: #000;
     justify-content: space-between;

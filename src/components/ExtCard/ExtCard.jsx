@@ -2,7 +2,7 @@ import React from 'react'
 import './ExtCard.scss';
 
 
-function ExtCard({logo, name, description, isActive}) {
+function ExtCard({logo, name, description, isActive, handleDelete, handleToggle}) {
   return (
     <div className='extCard'>
       <div className="extCard__content">
@@ -16,9 +16,9 @@ function ExtCard({logo, name, description, isActive}) {
       </div>
 
       <div className="extCard__buttons">
-        <button className="extCard__buttons--remove" type="button">Remove</button>
+        <button className="extCard__buttons--remove" id={name}type="button" onClick={handleDelete}>Remove</button>
         
-        <input className='extCard__buttons--toggle' type="checkbox" name="toggle" id={`toggle-${name}`} checked={isActive} />
+        <input className='extCard__buttons--toggle' type="checkbox" name="toggle" id={`toggle-${name}`} checked={isActive} onChange={() => handleToggle(name)} />
         <label htmlFor={`toggle-${name}`} className='toggle'></label>
       </div>
     </div>
