@@ -1,5 +1,6 @@
 @use "../../styles/partials/globals" as *;
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
 .themeToggle {
   &-container {
@@ -10,7 +11,14 @@
     justify-content: space-between;
     padding: 0.75rem;
     box-shadow: var(--toggle-container-bs);
+    border: var(--toggle-container-brdr);
     border-radius: $radius10;
+
+    @include desktop {
+      padding: 0.8rem;
+      border-radius: $radius20;
+    }
+
   }
 
   &__toggle {

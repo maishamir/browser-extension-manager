@@ -1,6 +1,7 @@
 @use "../../styles/partials/globals" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
 
 .extCard {
   padding: $spacing250;
@@ -8,12 +9,23 @@
   border-radius: $radius20;
   border: 1px solid var(--ext-card-brdr);
   box-shadow: var(--ext-card-bs);
+  @include tablet {
+     flex: 1 1 calc(50% - $spacing150 / 2);
+  }
+
+  @include desktop {
+    flex: 0 0 calc((100% - 2 * $spacing150) / 3);
+  }
 
   &__content {
     display: flex;
     align-items: flex-start;
     gap: $spacing200;
     margin-bottom: $spacing300;
+
+    @include tablet {
+      margin-bottom: 2.875rem;
+    }
 
     &-text {
       display: flex;
@@ -36,7 +48,7 @@
     justify-content: space-between;
     align-items: center;
 
-    button {
+    &--remove {
       @extend .text-preset-6;
       color: var(--ext-card-btn-txt);
       padding: $spacing100 $spacing200;
@@ -44,6 +56,14 @@
       border-radius: $radiusFull;
       background: transparent;
       border: 1px solid var(--ext-card-btn-brdr);
+      cursor: pointer;
+      transition: all 0.15s ease-in-out;
+
+      &:hover {
+        background-color: var(--selected-button);
+        color: var(--tp4);
+        border: var(--toggle-container-brdr);
+      }
     }
 
     &--toggle {

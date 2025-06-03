@@ -1,6 +1,7 @@
 @use "./styles/partials/globals" as *;
 @use "./styles/partials/variables" as *;
-// @use "./styles/partials/typography" as *;
+@use "./styles/partials/typography" as *;
+@use "./styles/partials/mixins" as *;
 
 
 .app {
@@ -8,17 +9,34 @@
   background: var(--background);
   padding: $spacing250 $spacing200;
 
+  @include tablet {
+    padding: $spacing300 $spacing400;
+  }
+
+  @include desktop {
+    padding: $spacing500 8.43rem;
+  }
+
   &__header {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: $spacing500;
     gap: $spacing300;
+    
+
+    @include tablet {
+      margin-top: $spacing800;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
   &__title {
     @extend .text-preset-1;
     text-align: center;
+
+    
   }
 
   &__filters {
@@ -31,11 +49,18 @@
       border: 1px solid var(--filter-button-brdr);
       border-radius: $radiusFull;
       cursor: pointer;
+      box-shadow:var(--filter-button-bs);
+      transition: all 0.15s ease-in-out;
+
+      &:hover {
+        background: var(--button-hvr)
+      }
 
       &--selected {
         @extend .text-preset-4;
         background: var(--selected-button);
         border: 1px solid transparent;
+        opacity: 1;
       }
     }
   }
@@ -45,6 +70,11 @@
     flex-direction: column;
     gap: $spacing150;
     margin-top: $spacing500;
-    
+
+    @include tablet {
+      margin-top: $spacing400;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 }

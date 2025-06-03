@@ -9,18 +9,21 @@
 }
 
 :root {
-  --background: #{$lightGradient}; 
+  --background: #{$lightGradient};
   --tp1: #{$neutral900};
   --tp2: #{$neutral900};
   --tp3: #{$neutral900};
   --tp4: #{$neutral0};
   --tp5: #{$neutral600};
   --tp6: #{neutral600};
-  
-  --toggle-container: #{$neutral0};
-  --toggle-container-bs: 0px 2px 3px -2px #D9E5F4;
 
-  --filter-button-brdr: none;
+  --toggle-container: #{$neutral0};
+  --toggle-container-bs: 0px 2px 3px 0px #d9e5f4;
+  --toggle-container-brdr: 1px solid #d6e2f5;
+
+  --filter-button-brdr: #{$neutral200};
+  --filter-button-bs: 0px 1px 2px 0px rgba(184, 196, 215, 0.4);
+  --button-hvr: rgba(251, 253, 254, 0.7);
 
   --logo-icon: #{$red700};
   --logo-text: #{$neutral900};
@@ -38,7 +41,7 @@
   --ext-card-toggle-bg: #{$neutral300};
 }
 
-[data-theme = "dark"] {
+[data-theme="dark"] {
   --background: #{$darkGradient};
   --tp1: #{$neutral0};
   --tp2: #{$neutral0};
@@ -47,8 +50,12 @@
   --tp5: #{$neutral300};
   --toggle-container: #{$neutral800};
   --toggle-container-bs: none;
+  --toggle-container-brdr: 1px solid transparent;
 
   --filter-button-brdr: #{$neutral600};
+  --filter-button-bs: none;
+  --button-hvr: #{$neutral600};
+
   --logo-icon: #{$red400};
   --logo-text: white;
   --selected-button: #{$red400};
