@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import logo from "../../assets/images/logo.svg";
-import moon from "../../assets/images/icon-moon.svg";
-import sun from "../../assets/images/icon-sun.svg";
+import logo from "/images/logo.svg";
+import moon from "/images/icon-moon.svg";
+import sun from "/images/icon-sun.svg";
 import "./ThemeToggle.scss";
 
 function ThemeToggle({ handleChange, isChecked }) {
