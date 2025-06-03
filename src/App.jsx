@@ -10,7 +10,7 @@ function App() {
   const preference = window.matchMedia(("prefers-color-scheme: dark)".matches))
   
   const [isDark, setIsDark] = useLocalStorage("isDark", preference);
-  const [selectedFilter, setSelectedFilter] = useState('Inactive') 
+  const [selectedFilter, setSelectedFilter] = useState('All') 
 
 
   const visibleItems = data.filter(item => {
