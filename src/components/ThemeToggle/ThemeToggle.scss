@@ -28,6 +28,7 @@
     width: 3.125rem;
     position: relative;
     cursor: pointer;
+    transition: all 0.15s ease-in-out;
 
     img {
       position: absolute;
@@ -35,6 +36,10 @@
       top: 50%;
       transform: translate(-50%, -50%);
       cursor: pointer;
+    }
+
+    &:hover {
+      background: var(--toggle-button-hvr);
     }
   }
 }

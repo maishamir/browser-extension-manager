@@ -20,6 +20,7 @@
   --toggle-container: #{$neutral0};
   --toggle-container-bs: 0px 2px 3px 0px #d9e5f4;
   --toggle-container-brdr: 1px solid #d6e2f5;
+  --toggle-button-hvr: #{$neutral300};
 
   --filter-button-brdr: #{$neutral200};
   --filter-button-bs: 0px 1px 2px 0px rgba(184, 196, 215, 0.4);
@@ -37,7 +38,7 @@
   --ext-card-bs: 0px 2px 2px 0px rgba(194, 206, 225, 0.21),
     0px 1px 5px 1px rgba(194, 206, 225, 0.21);
   --ext-card-btn-txt: #{$neutral900};
-  --ext-card-btn-brdr: #{$neutral200};
+  --ext-card-btn-brdr: #{$neutral300};
   --ext-card-toggle-bg: #{$neutral300};
 }
 
@@ -51,6 +52,8 @@
   --toggle-container: #{$neutral800};
   --toggle-container-bs: none;
   --toggle-container-brdr: 1px solid transparent;
+  --toggle-button-hvr: #{$neutral600};
+  
 
   --filter-button-brdr: #{$neutral600};
   --filter-button-bs: none;

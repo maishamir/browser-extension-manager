@@ -3,9 +3,12 @@ import "./App.scss";
 import data from "./data/data.json";
 import ThemeToggle from "./components/ThemeToggle/ThemeToggle";
 import ExtCard from "./components/ExtCard/ExtCard";
+import useLocalStorage from "use-local-storage";
 
 function App() {
 
+  const preference = window.matchMedia(("prefers-color-scheme: dark)".matches))
+  
   const [isDark, setIsDark] = useState(true);
   const [selectedFilter, setSelectedFilter] = useState('Inactive') 
 

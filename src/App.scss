@@ -56,11 +56,19 @@
         background: var(--button-hvr)
       }
 
+      &:active {
+        border: 1px solid 
+      }
+
       &--selected {
         @extend .text-preset-4;
         background: var(--selected-button);
         border: 1px solid transparent;
         opacity: 1;
+
+        &:hover {
+          background: var(--selected-button);
+        }
       }
     }
   }
